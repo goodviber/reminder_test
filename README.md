@@ -1,5 +1,9 @@
 # PropertyTest
 
-rake run to see at work
+rake run to issue reminders.
 
-Needs more tests, and overlap method for year end
+bundle exec rpsec to run tests.
+
+query date is set in Rakefile, in reminder rules section.
+
+Needs more tests, and date function for end year cases.
