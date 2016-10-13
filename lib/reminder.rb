@@ -4,10 +4,9 @@ class Reminder
 
   def initialize(reminder_rules =[])
     @reminder_rules = reminder_rules
-    @results_array = []
   end
 
-  def on(date, estates)
+  def on(query_date, estates)
     estates.each do |estate|
       reminder_rules.each do |rule|
         rule.apply(estate.code, estate.period, estate.dates)

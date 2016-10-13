@@ -14,7 +14,7 @@ task :run do
   Dir.glob(project_root + '/lib/*') { |file| require file }
 
   reminder_rules = []
-  reminder_rules << Rule.quarterly_rule('quarterly', '1 May')
+  reminder_rules << Rule.quarterly_rule('quarterly', '1 Feb')
   reminder_rules << Rule.twice_yearly_rule('twice_yearly', '1 May')
 
   estates = []
@@ -24,5 +24,5 @@ task :run do
 
   reminder = Reminder.new(reminder_rules)
   reminder.on(Date.today, estates)
-
+  #binding.pry
 end
